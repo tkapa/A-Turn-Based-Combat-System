@@ -1069,8 +1069,10 @@ GameObject:
   - component: {fileID: 1202288008}
   - component: {fileID: 1202288007}
   - component: {fileID: 1202288006}
+  - component: {fileID: 1202288012}
+  - component: {fileID: 1202288011}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1089,6 +1091,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 11400000, guid: f9160496e2e22304fac67f08f3391e76, type: 2}
   mana: {fileID: 11400000, guid: fd60f60e0a2f9a94cbc86219237dcff6, type: 2}
+  isPlayerTurn: {fileID: 11400000, guid: 36154c5021143064a8fb8e6dca5846b8, type: 2}
+  endTurnEvent: {fileID: 11400000, guid: 789d003b97afddb4b8d0188536b2fde5, type: 2}
 --- !u!65 &1202288007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1156,6 +1160,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1202288011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202288005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9e2996e11ccf5449f3dfdb95cf8c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 789d003b97afddb4b8d0188536b2fde5, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1202288012}
+        m_MethodName: ChangeRoundState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1202288012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202288005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0028a996605ccec41a4a80adfe1076b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerTurn: {fileID: 11400000, guid: 36154c5021143064a8fb8e6dca5846b8, type: 2}
 --- !u!1 &1219021840
 GameObject:
   m_ObjectHideFlags: 0
