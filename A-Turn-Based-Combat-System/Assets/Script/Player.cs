@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Resource health;
+    public Resource mana;
+
+    public void ExecuteSkill(Skill skill)
+    {
+        Debug.Log(skill.name + ": " + skill.skillCost);
+    }
 }
