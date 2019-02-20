@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4857ed180d27038499bba301e55c911a, type: 3}
   m_Name: isPlayerTurn
   m_EditorClassIdentifier: 
-  value: 0
+  value: 1
