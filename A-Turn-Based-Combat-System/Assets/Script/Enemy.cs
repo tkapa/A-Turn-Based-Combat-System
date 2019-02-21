@@ -10,20 +10,24 @@ public class Enemy : ScriptableObject {
     public List<Skill> skills =
         new List<Skill>();
 
+    public bool isTargeted = false;
+
     public Mesh model;
+
+    public EnemyList enemies;
 
     private void OnEnable()
     {
- 
+        enemies.Add(this);
     }
 
     private void OnDisable()
     {
-
+        enemies.Remove(this);
     }
 
     public void ExecuteAction()
     {
-
+        Debug.Log("Enemy performed an Action!");
     }
 }

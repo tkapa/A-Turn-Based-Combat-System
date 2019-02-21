@@ -15,4 +15,6 @@ MonoBehaviour:
   health: 50
   skills:
   - {fileID: 11400000, guid: f38252f2a696f244fa9fdfa637cfadda, type: 2}
+  isTargeted: 0
   model: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  enemies: {fileID: 11400000, guid: f954cf5a8915b9243b61ea9c15440430, type: 2}

@@ -7,6 +7,8 @@ public class EnemySystem : MonoBehaviour {
     public BoolVariable isPlayerTurn;
     public GameEvent endTurnEvent;
 
+    public EnemyList enemies;
+
 	// Update is called once per frame
 	void Update () {
         if (!isPlayerTurn.value)
@@ -15,7 +17,11 @@ public class EnemySystem : MonoBehaviour {
 
     void PerformAction()
     {
-        print("Enemy Performs an Action!");
+        foreach(Enemy e in enemies.items)
+        {
+            e.ExecuteAction();
+        }        
+
         endTurnEvent.Raise();
     }
 }

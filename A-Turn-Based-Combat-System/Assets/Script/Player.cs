@@ -9,8 +9,10 @@ public class Player : MonoBehaviour {
 
     public BoolVariable isPlayerTurn;
 
-    public GameEvent endTurnEvent;
+    public EnemyList enemies;
 
+    public GameEvent endTurnEvent;
+    
     public void ExecuteSkill(Skill skill)
     {
         Debug.Log(skill.name + ": " + skill.skillCost);

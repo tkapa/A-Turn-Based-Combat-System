@@ -1092,6 +1092,7 @@ MonoBehaviour:
   health: {fileID: 11400000, guid: f9160496e2e22304fac67f08f3391e76, type: 2}
   mana: {fileID: 11400000, guid: fd60f60e0a2f9a94cbc86219237dcff6, type: 2}
   isPlayerTurn: {fileID: 11400000, guid: 36154c5021143064a8fb8e6dca5846b8, type: 2}
+  enemies: {fileID: 11400000, guid: f954cf5a8915b9243b61ea9c15440430, type: 2}
   endTurnEvent: {fileID: 11400000, guid: 789d003b97afddb4b8d0188536b2fde5, type: 2}
 --- !u!65 &1202288007
 BoxCollider:
@@ -1438,6 +1439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerTurn: {fileID: 11400000, guid: 36154c5021143064a8fb8e6dca5846b8, type: 2}
   endTurnEvent: {fileID: 11400000, guid: 789d003b97afddb4b8d0188536b2fde5, type: 2}
+  enemies: {fileID: 11400000, guid: f954cf5a8915b9243b61ea9c15440430, type: 2}
 --- !u!65 &1269459283
 BoxCollider:
   m_ObjectHideFlags: 0
