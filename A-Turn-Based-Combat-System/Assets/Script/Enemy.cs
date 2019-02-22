@@ -26,8 +26,22 @@ public class Enemy : ScriptableObject {
         enemies.Remove(this);
     }
 
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+            Death();
+    }
+
     public void ExecuteAction()
     {
         Debug.Log("Enemy performed an Action!");
+    }
+
+    void Death()
+    {
+        //Exp rewards, death actions, run enemy death events
+        Debug.Log("This one's dead, Chief");
     }
 }
