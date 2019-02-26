@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f77edafc77915224198dc4b64ea2bd07, type: 3}
   m_Name: Bigger Enemy
   m_EditorClassIdentifier: 
-  name: 
-  health: 0
-  skills: []
-  isTargeted: 0
-  model: {fileID: 0}
-  enemies: {fileID: 0}
-  deathEvent: {fileID: 0}
+  data:
+    name: Bigger Enemy
+    health: 150
+    skills:
+    - {fileID: 11400000, guid: f38252f2a696f244fa9fdfa637cfadda, type: 2}
+    isTargeted: 0
+    model: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
