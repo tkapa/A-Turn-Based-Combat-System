@@ -17,10 +17,10 @@ public class EnemySystem : MonoBehaviour {
 
     void PerformAction()
     {
-        foreach(Enemy e in enemies.items)
+        for (int i = enemies.items.Count-1; i >= 0 ; i--)
         {
-            e.ExecuteAction();
-        }        
+            enemies.items[i].ExecuteAction();
+        }      
 
         endTurnEvent.Raise();
     }
