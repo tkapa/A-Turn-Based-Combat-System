@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
     public BoolVariable isPlayerTurn;
 
     public EnemyList enemies;
-    private int targetIndex = 0;
+    public Resource targetIndex;
 
 
     public GameEvent endTurnEvent;
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour {
     public void ExecuteSkill(Skill skill)
     {
         Debug.Log(skill.name + ": " + skill.skillCost);
-        enemies.items[targetIndex].TakeDamage(skill.skillDamage);
+        enemies.items[targetIndex.currentValue].TakeDamage(skill.skillDamage);
         endTurnEvent.Raise();
     }
 }
