@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Condensing the data required for easy copying.
 [System.Serializable]
 public struct Data
 {
     public string name;
     public float health;
+    public float maxHealth;
     public List<Skill> skills;
-    public bool isTargeted;
     public Mesh model;
 }
 

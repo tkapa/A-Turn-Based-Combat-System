@@ -14,4 +14,9 @@ public abstract class RuntimeSet<T>: ScriptableObject {
     {
         if (items.Contains(t)) items.Remove(t);
     }
+
+    public int GetIndex(T t)
+    {
+        return 0;
+    }
 }

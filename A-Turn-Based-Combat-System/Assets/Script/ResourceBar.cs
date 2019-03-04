@@ -10,6 +10,7 @@ public class ResourceBar : MonoBehaviour {
     public Slider slider;
     public Text text;
 
+    //Allows for new resource bars to be made
     private void Start()
     {
         slider.maxValue = resourceData.maximumValue;

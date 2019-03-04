@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -172,6 +172,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114551104}
+        m_MethodName: CheckTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114551106
@@ -255,6 +266,8 @@ MonoBehaviour:
     isTargeted: 0
     model: {fileID: 0}
   deathEvent: {fileID: 11400000, guid: 74732f4427b62cd4eaeecb41b6ac2b40, type: 2}
+  material: {fileID: 2100000, guid: f535066fe65417b4ebf8e81be07dae2d, type: 2}
+  playerTarget: {fileID: 11400000, guid: 7eaab932cf77bf9488cc79cdea8bc662, type: 2}
 --- !u!65 &116175698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -282,7 +295,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f535066fe65417b4ebf8e81be07dae2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -738,7 +751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73, y: -145.4}
+  m_AnchoredPosition: {x: -16.7, y: -197.6}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526124142
@@ -1511,6 +1524,8 @@ MonoBehaviour:
     isTargeted: 0
     model: {fileID: 0}
   deathEvent: {fileID: 11400000, guid: 74732f4427b62cd4eaeecb41b6ac2b40, type: 2}
+  material: {fileID: 2100000, guid: f535066fe65417b4ebf8e81be07dae2d, type: 2}
+  playerTarget: {fileID: 11400000, guid: 7eaab932cf77bf9488cc79cdea8bc662, type: 2}
 --- !u!65 &1269459283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1538,7 +1553,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f535066fe65417b4ebf8e81be07dae2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1778,7 +1793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.00003, y: -174.3}
+  m_AnchoredPosition: {x: -16.699982, y: -226.50002}
   m_SizeDelta: {x: 200, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1596560420
@@ -2107,6 +2122,8 @@ MonoBehaviour:
     isTargeted: 0
     model: {fileID: 0}
   deathEvent: {fileID: 11400000, guid: 74732f4427b62cd4eaeecb41b6ac2b40, type: 2}
+  material: {fileID: 2100000, guid: f535066fe65417b4ebf8e81be07dae2d, type: 2}
+  playerTarget: {fileID: 11400000, guid: 7eaab932cf77bf9488cc79cdea8bc662, type: 2}
 --- !u!65 &1853151078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2134,7 +2151,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f535066fe65417b4ebf8e81be07dae2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

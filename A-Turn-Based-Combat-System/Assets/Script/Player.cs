@@ -11,8 +11,7 @@ public class Player : MonoBehaviour {
 
     public EnemyList enemies;
     public Resource targetIndex;
-
-
+    
     public GameEvent endTurnEvent;
 
     private void Update()
@@ -20,6 +19,7 @@ public class Player : MonoBehaviour {
         
     }
 
+    //Performs a skill against an enemy (will be expanded)
     public void ExecuteSkill(Skill skill)
     {
         Debug.Log(skill.name + ": " + skill.skillCost);
