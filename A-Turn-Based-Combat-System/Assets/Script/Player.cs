@@ -14,6 +14,11 @@ public class Player : MonoBehaviour {
     
     public GameEvent endTurnEvent;
 
+    private void Start()
+    {
+        enemies.items[targetIndex.currentValue].Targeted();
+    }
+
     private void Update()
     {
         
@@ -22,8 +27,16 @@ public class Player : MonoBehaviour {
     //Performs a skill against an enemy (will be expanded)
     public void ExecuteSkill(Skill skill)
     {
-        Debug.Log(skill.name + ": " + skill.skillCost);
-        enemies.items[targetIndex.currentValue].TakeDamage(skill.skillDamage);
+        Debug.Log(skill.name + ": " + skill.cost);
+
+        if (skill.cost <= mana.currentValue)
+        {
+            mana.currentValue -= skill.cost;
+            enemies.items[targetIndex.currentValue].TakeDamage(skill.damage);
+        }
+        else
+            print("Cannot cast this, turn is passed");
+
         endTurnEvent.Raise();
     }
 }

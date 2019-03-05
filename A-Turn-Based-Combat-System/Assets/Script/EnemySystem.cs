@@ -37,6 +37,7 @@ public class EnemySystem : MonoBehaviour {
     //Does something if the player has won
     void PlayerWins()
     {
+        print("The player has won");
         isPlayerTurn.value = true;
     }
 }

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41229a25d02a9674eaca06a28fe88827, type: 3}
   m_Name: Aero
   m_EditorClassIdentifier: 
-  skillName: Aero
-  skillCost: 20
-  skillDamage: 40
-  damageType: 2
+  name: Aero
+  cost: 10
+  damage: 15
+  type: 2

@@ -11,8 +11,8 @@ public class Skill : ScriptableObject {
         magical
     }
 
-    public string skillName;
-    public int skillCost;
-    public int skillDamage;
-    public DamageType damageType;
+    public new string name;
+    public int cost;
+    public int damage;
+    public DamageType type;
 }

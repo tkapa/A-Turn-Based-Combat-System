@@ -262,11 +262,12 @@ MonoBehaviour:
   data:
     name: 
     health: 0
+    maxHealth: 0
     skills: []
-    isTargeted: 0
     model: {fileID: 0}
   deathEvent: {fileID: 11400000, guid: 74732f4427b62cd4eaeecb41b6ac2b40, type: 2}
   material: {fileID: 2100000, guid: f535066fe65417b4ebf8e81be07dae2d, type: 2}
+  isTargeted: 0
   playerTarget: {fileID: 11400000, guid: 7eaab932cf77bf9488cc79cdea8bc662, type: 2}
 --- !u!65 &116175698
 BoxCollider:
@@ -1328,7 +1329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3542d91342753a4fb1ac0d86fedb767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillData: {fileID: 11400000, guid: 3f1c8636a334180428ea7d3999f91b1d, type: 2}
+  skillData: {fileID: 11400000, guid: 0eb29cf949d7d8f49bfc21501c75436c, type: 2}
   skillText: {fileID: 870076500}
 --- !u!114 &1219021843
 MonoBehaviour:
@@ -1520,11 +1521,12 @@ MonoBehaviour:
   data:
     name: 
     health: 0
+    maxHealth: 0
     skills: []
-    isTargeted: 0
     model: {fileID: 0}
   deathEvent: {fileID: 11400000, guid: 74732f4427b62cd4eaeecb41b6ac2b40, type: 2}
   material: {fileID: 2100000, guid: f535066fe65417b4ebf8e81be07dae2d, type: 2}
+  isTargeted: 0
   playerTarget: {fileID: 11400000, guid: 7eaab932cf77bf9488cc79cdea8bc662, type: 2}
 --- !u!65 &1269459283
 BoxCollider:
@@ -2118,11 +2120,12 @@ MonoBehaviour:
   data:
     name: 
     health: 0
+    maxHealth: 0
     skills: []
-    isTargeted: 0
     model: {fileID: 0}
   deathEvent: {fileID: 11400000, guid: 74732f4427b62cd4eaeecb41b6ac2b40, type: 2}
   material: {fileID: 2100000, guid: f535066fe65417b4ebf8e81be07dae2d, type: 2}
+  isTargeted: 0
   playerTarget: {fileID: 11400000, guid: 7eaab932cf77bf9488cc79cdea8bc662, type: 2}
 --- !u!65 &1853151078
 BoxCollider:

@@ -15,7 +15,7 @@ public class SkillButton : MonoBehaviour {
     {
         player = FindObjectOfType<Player>();
 
-        skillText.text = skillData.skillName;
+        skillText.text = skillData.name;
     }
 
     public void PassSkill()

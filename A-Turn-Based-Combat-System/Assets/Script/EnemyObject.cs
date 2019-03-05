@@ -12,7 +12,7 @@ public class EnemyObject : MonoBehaviour {
 
     public GameEvent deathEvent;
     public Material material;
-    public bool isTargeted;
+    public bool isTargeted = false;
 
     public Resource playerTarget;
 
@@ -20,7 +20,6 @@ public class EnemyObject : MonoBehaviour {
     {
         data = enemyData.data;
         GetComponent<MeshFilter>().mesh = data.model;
-        Targeted();
     }
 
     //Ensure the enemy adds and removes themselves from the enemy list automatically
@@ -51,16 +50,12 @@ public class EnemyObject : MonoBehaviour {
     //Changes status of enemy to targeted or untargeted
     public void Targeted()
     {
-        if (isTargeted)
-        {
-            material.SetFloat("_IsTargeted", 1);
-        }
-        else
-        {
-            material.SetFloat("_IsTargeted", 0);
-        }
-
         isTargeted = !isTargeted;
+
+        if(isTargeted)
+            print("Target switched to: " + gameObject.name);
+        else
+            print("Target switched from: " + gameObject.name);
     }
 
     //Called things that happen when the enemy takes damage
