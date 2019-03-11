@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Player Mana
   m_EditorClassIdentifier: 
   name: Mana
-  currentValue: 100
+  currentValue: 1
   maximumValue: 100

@@ -21,7 +21,10 @@ public class Player : MonoBehaviour {
 
     private void Update()
     {
-        
+        if (health.currentValue <= 0)
+        {
+            print("Player has lost");
+        }            
     }
 
     //Performs a skill against an enemy (will be expanded)
@@ -29,7 +32,7 @@ public class Player : MonoBehaviour {
     {
         Debug.Log(skill.name + ": " + skill.cost);
 
-        if (skill.cost <= mana.currentValue)
+        if (skill.cost <= mana.currentValue && isPlayerTurn)
         {
             mana.currentValue -= skill.cost;
             enemies.items[targetIndex.currentValue].TakeDamage(skill.damage);

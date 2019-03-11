@@ -10,7 +10,7 @@ public struct Data
     public float health;
     public float maxHealth;
     public List<Skill> skills;
-    public Mesh model;
+    public Texture texture;
 }
 
 [CreateAssetMenu(fileName ="New Enemy", menuName ="Enemy")]

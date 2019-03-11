@@ -9,12 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f77edafc77915224198dc4b64ea2bd07, type: 3}
-  m_Name: Basic Enemy
+  m_Name: Biggerest Enemy
   m_EditorClassIdentifier: 
   data:
-    name: Basic Enemy
-    health: 100
-    maxHealth: 0
+    name: Biggerest Enemy
+    health: 1000
+    maxHealth: 1000
     skills:
     - {fileID: 11400000, guid: f38252f2a696f244fa9fdfa637cfadda, type: 2}
-    texture: {fileID: 2800000, guid: 2fbf762dd1c11c44ea39ddd6b529faf7, type: 3}
+    - {fileID: 11400000, guid: 0eb29cf949d7d8f49bfc21501c75436c, type: 2}
+    texture: {fileID: 2800000, guid: b9b64d9c12d51304bba99043145fafc1, type: 3}

@@ -15,11 +15,26 @@ public class EnemyObject : MonoBehaviour {
     public bool isTargeted = false;
 
     public Resource playerTarget;
+    public Resource playerHealth;
+
+    Renderer render;
+    MaterialPropertyBlock propertyBlock;
+
+    private void Awake()
+    {
+        data = enemyData.data;
+
+        render = GetComponent<Renderer>();
+        propertyBlock = new MaterialPropertyBlock();
+        render.GetPropertyBlock(propertyBlock);
+
+        propertyBlock.SetTexture("_MonsterTexture", data.texture);
+        render.SetPropertyBlock(propertyBlock);
+    }
 
     private void Start()
     {
-        data = enemyData.data;
-        GetComponent<MeshFilter>().mesh = data.model;
+        
     }
 
     //Ensure the enemy adds and removes themselves from the enemy list automatically
@@ -45,17 +60,27 @@ public class EnemyObject : MonoBehaviour {
     public void ExecuteAction()
     {
         Debug.Log("Enemy performed an Action!");
+
+        playerHealth.currentValue -= data.skills[0].damage;
     }
 
     //Changes status of enemy to targeted or untargeted
     public void Targeted()
     {
-        isTargeted = !isTargeted;
+        render.GetPropertyBlock(propertyBlock);
 
-        if(isTargeted)
-            print("Target switched to: " + gameObject.name);
+        isTargeted = !isTargeted;
+        
+        if (isTargeted)
+        { 
+            propertyBlock.SetInt("_IsTargeted", 1);
+        }           
         else
-            print("Target switched from: " + gameObject.name);
+        {
+            propertyBlock.SetInt("_IsTargeted", 0);
+        }
+
+        render.SetPropertyBlock(propertyBlock);
     }
 
     //Called things that happen when the enemy takes damage
@@ -69,16 +94,39 @@ public class EnemyObject : MonoBehaviour {
 
     void Death()
     {
+        StartCoroutine(DeathAnimation());
+
         //Exp rewards, death actions, run enemy death events
         if (isTargeted)
         {
-            if (playerTarget.currentValue > 0)
-                playerTarget.currentValue--;
+            Targeted();
+            enemies.Remove(this);
+            playerTarget.currentValue = 0;
 
-            enemies.items[playerTarget.currentValue].Targeted();
+            if (enemies.items.Count != 0)
+                enemies.items[playerTarget.currentValue].Targeted();
+        }   
+    }
+
+    //A coroutine that animates the death of an enemy, disintegrating them, then they die
+    private IEnumerator DeathAnimation()
+    {
+        render.GetPropertyBlock(propertyBlock);
+
+        float currentValue = 0;
+
+        while(currentValue < 1)
+        {
+            yield return new WaitForFixedUpdate();
+
+            currentValue += Time.fixedDeltaTime;
+            propertyBlock.SetFloat("_DissolveValue", currentValue);
+            render.SetPropertyBlock(propertyBlock);
         }
 
         deathEvent.Raise();
         this.gameObject.SetActive(false);
+
+        yield return null;
     }
 }
