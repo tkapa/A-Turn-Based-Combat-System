@@ -5,7 +5,9 @@ using UnityEngine;
 public class EnemySystem : MonoBehaviour {
 
     public BoolVariable isPlayerTurn;
+
     public GameEvent endTurnEvent;
+    public GameEvent playerWinsEvent;
 
     public EnemyList enemies;
 
@@ -21,7 +23,7 @@ public class EnemySystem : MonoBehaviour {
     {
         if (enemies.items.Count == 0)
         {
-            PlayerWins();
+            playerWinsEvent.Raise();
             return;
         }
             
@@ -32,12 +34,5 @@ public class EnemySystem : MonoBehaviour {
         }      
 
         endTurnEvent.Raise();
-    }
-
-    //Does something if the player has won
-    void PlayerWins()
-    {
-        print("The player has won");
-        isPlayerTurn.value = true;
     }
 }

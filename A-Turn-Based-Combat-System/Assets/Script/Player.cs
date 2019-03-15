@@ -13,17 +13,20 @@ public class Player : MonoBehaviour {
     public Resource targetIndex;
     
     public GameEvent endTurnEvent;
+    public GameEvent playerWinsEvent;
 
     private void Start()
     {
         enemies.items[targetIndex.currentValue].Targeted();
+        health.currentValue = health.maximumValue;
+        mana.currentValue = mana.maximumValue;
     }
 
     private void Update()
     {
         if (health.currentValue <= 0)
         {
-            print("Player has lost");
+            playerWinsEvent.Raise();
         }            
     }
 
